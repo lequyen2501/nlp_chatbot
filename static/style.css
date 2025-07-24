@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chatbox {
+  width: 800px;
+  height: 600px; /* Đã giảm chiều cao để phù hợp hơn với giao diện */
+  background: #f0f2f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 16px;
+  background: #4a90e2;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f0f2f5 ;
+  font-size: 18px ;
+  font-weight: 600;
+  color: #3f3e3e ;
+  scroll-behavior: smooth;
+}
+
+.chat-input {
+  display: flex;
+  padding: 12px; 
+  /* border-top: 1px solid #ccc; */
+  background: #fff;
+  height: 80px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 19px;
+  font-weight: 500;
+  color:#c0b8b8 ;
+}
+
+.chat-input button {
+  margin-left: 8px;
+  padding: 10px 10px;
+  height: 50px ;
+  width: 50px ;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px ;
+  
+}
+.chat-input button:hover {
+  background: #357ABD;
+}
+
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message.user {
+  text-align: right;
+}
+
+.message.bot {
+  text-align: left;
+}
+
+.message span {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #e1f5fe;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.message.user span {
+  background: #cfe9ff;
+}
+.chat-messages {
+  position: relative;
+  height: 400px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #999;
+  font-size: 18px;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
